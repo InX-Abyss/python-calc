@@ -13,5 +13,4 @@ if Type is "*":
 if Type is "/":
     print('You chose division')
 
-'''Whatever'''
-          
+'''Whatever1'''
