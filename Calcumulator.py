@@ -12,3 +12,6 @@ if Type is "*":
     print('You chose multiplication')
 if Type is "/":
     print('You chose division')
+
+'''Whatever'''
+          
