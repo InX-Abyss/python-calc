@@ -1,5 +1,4 @@
-print("This is a calculator")
-Type = input("Would you like '+', '-', '*', or '/'?")
+from functools import reduce
 
 
 def get_int(prompt):
@@ -12,27 +11,28 @@ def get_int(prompt):
 
 def get_nums():
     while True:
-        num = get_int(f"Enter your values one at a time. /n Type zero to break): ")
+        num = get_int(f"\nEnter your values one at a time.\nPress enter without input to break\n>>>>> ")
+        if num <= 0:
+            break
+        yield num
 
 
-numbers = []
+operations = {
+    '+': lambda x, y: x + y,
+    '-': lambda x, y: x - y,
+    '*': lambda x, y: x * y,
+    '/': lambda x, y: x / y,
+    '%': lambda x, y: x % y
+}
 
-if Type is "+":
-    pass
+print("This is a calculator")
 
-if Type is "-":
-    pass
+while True:
+    oper = input(f'Enter the operation symbol you wish to perform,\nOperations: [{", ".join(operations.keys())}]\n>>> ')
+    if oper in operations:
+        break
+    else:
+        print('Pick a proper operator!')
 
-if Type is "*":
-    pass
-
-if Type is "-":
-    pass
-
-if Type is "*":
-    pass
-
-if Type is "/":
-    pass
-
-'''Added functionality for all basic operations'''
+print('Enter all the values you wish to process:')
+print(f'\nThe result of applying {oper} to the values is:\n{reduce(operations[oper], get_nums())}\n\nGoodbye!')

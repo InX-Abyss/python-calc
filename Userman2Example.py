@@ -25,11 +25,11 @@ operations = {
 }
 
 while True:
-    oper = input(f'enter the operation you want to apply, \n operations: [{", ".join(operations.keys())}]\n>>> ')
+    oper = input(f'enter the operation you want to apply,\noperations: [{", ".join(operations.keys())}]\n>>> ')
     if oper in operations:
         break
     else:
         print('Please enter a correct operator!')
 
-print('Enter all numbers you want to apply the operatons to: \n')
+print('Enter all numbers you want to apply the operations to: \n')
 print(f'the result of applying {oper} to the numbers is: {reduce(operations[oper], get_nums())}')
