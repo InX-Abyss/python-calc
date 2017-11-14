@@ -1,41 +1,37 @@
 print("This is a calculator")
 Type = input("Would you like '+', '-', '*', or '/'?")
-addition = []
-if Type == "+":
-    number = input("Enter your first value.")           #String value
+
+
+def get_int(prompt):
     while True:
-        if number =="-":
-                addition.pop
         try:
-            number = int(number)                        #try to convert to integer
-            addition.append(number)
-            print(addition)
-        except ValueError:                              #If it fails to convert
-            number = input("please enter an integer")
+            return int(input(prompt))
+        except ValueError:
+            print("Please enter a valid number!")
 
 
+numbers = []
 
-        else:
-            number = input("Enter another value, if none press enter")
-            if number == "":
-                print(sum(addition))
+if Type is "+":
+    num = 1
+    while num >= 0:
+        num = get_int("Enter your values (One at a time). Press enter to get the sum: ")
+        numbers.append(num)
 
-#     if number == "0":
-#         pass
-#     numbers = []
-#     numbers.append(number)
-#
-# if Type is "-":
-#     pass
-#
-# if Type is "*":
-#     pass
-#
-# if Type is "-":
-#     pass
-#
-# if Type is "*":
-#     pass
-#
-# if Type is "/":
-#     pass
+
+if Type is "-":
+    pass
+
+if Type is "*":
+    pass
+
+if Type is "-":
+    pass
+
+if Type is "*":
+    pass
+
+if Type is "/":
+    pass
+
+'''Added functionality for all basic operations'''
