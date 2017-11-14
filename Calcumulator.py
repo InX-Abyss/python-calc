@@ -1,5 +1,5 @@
 print("This is a calculator")
-Type = input("Would you like +, -, *, or /?")
+Type = input("Would you like '+', '-', '*', or '/'?")
 
 if Type is "+":
     print('You chose addition!')
@@ -12,5 +12,3 @@ if Type is "*":
     print('You chose multiplication')
 if Type is "/":
     print('You chose division')
-
-'''Whatever - Approved'''
