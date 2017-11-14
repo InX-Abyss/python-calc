@@ -21,3 +21,5 @@ if Type is "/":
     first = input("Please type the first number")
     second = input("Please type the second number")
     print(int(first) / int(second))
+
+    '''Added functionality for all basic operations'''
