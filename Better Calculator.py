@@ -4,6 +4,8 @@ addition = []
 if Type == "+":
     number = input("Enter your first value.")           #String value
     while True:
+        if number =="-":
+                addition.pop
         try:
             number = int(number)                        #try to convert to integer
             addition.append(number)
