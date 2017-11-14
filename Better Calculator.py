@@ -10,14 +10,15 @@ def get_int(prompt):
             print("Please enter a valid number!")
 
 
+def get_nums():
+    while True:
+        num = get_int(f"Enter your values one at a time. /n Type zero to break): ")
+
+
 numbers = []
 
 if Type is "+":
-    num = 1
-    while num >= 0:
-        num = get_int("Enter your values (One at a time). Press enter to get the sum: ")
-        numbers.append(num)
-
+    pass
 
 if Type is "-":
     pass
