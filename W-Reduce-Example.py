@@ -1,4 +1,7 @@
-from functools import reduce
+# No touchy. Can't recreate reduce function. T_T
+
+
+from
 from time import sleep
 
 
@@ -29,7 +32,7 @@ operations = {
     '-': lambda x, y: x - y,  # Since this is a dictionary, we can call these functions by their keys.
     '*': lambda x, y: x * y,  # The Keys are the beginning section of each line
     '/': lambda x, y: x / y,  # <function key>: <function name and arguments go here>: <function goes here>
-    '%': lambda x, y: x % y   # lambda creates anonymous functions. (Functions not bound to a name.)
+    '%': lambda x, y: x % y  # lambda creates anonymous functions. (Functions not bound to a name.)
 }
 
 # MORE LAMBDA EXPLANATION
@@ -39,8 +42,8 @@ operations = {
 while True:
     print("This is a calculator")
     while True:
-        print("Enter the operation symbol you wish to perform,\n")
-        oper = input(f'Operations: [{", ".join(operations.keys())}]\n>>> ')
+        oper = input(
+            f'Enter the operation symbol you wish to perform,\nOperations: [{", ".join(operations.keys())}]\n>>> ')
         if oper in operations:
             break
         print('\nPick a proper operator! Please wait...\n')
@@ -49,12 +52,10 @@ while True:
     print('Enter all the values you wish to process:\n')
     while True:
         try:
-            result = reduce(operations[oper], get_nums())  # Line 42 | reduce(func, seq)
+            result = process_ints(operations[oper], get_nums())  # Line 42
             break
         except TypeError:
             print('At least enter one value to compute a result!')
-        except ZeroDivisionError:
-            print('Seriously... Dividing by zero? Come one dude...')
 
     print(f'The result of applying {oper} to the values is:\n{result}\n')
 
