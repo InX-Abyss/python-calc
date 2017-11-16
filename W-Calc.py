@@ -11,8 +11,8 @@ def get_int(prompt):
 
 def get_nums():
     while True:
-        num = get_int(f"\nEnter your values one at a time.\nPress enter without input to break\n>>>>> ")
-        if num <= 0:
+        num = get_int(f"\nEnter your values one at a time.\nEnter '0' to finish.\n>>>>> ")
+        if num == 0:
             break
         yield num
 
