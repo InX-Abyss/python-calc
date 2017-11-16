@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../inxa-gc_cogs/.idea/inxa-gc_cogs.iml" filepath="$PROJECT_DIR$/../inxa-gc_cogs/.idea/inxa-gc_cogs.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python-calc.iml" filepath="$PROJECT_DIR$/.idea/python-calc.iml" />
     </modules>
   </component>
